@@ -56,7 +56,7 @@ function App() {
       const gastosFiltrados = gastos.filter( gasto => gasto.categoria === filtro);
       setGastosFiltrados(gastosFiltrados);
     }
-  }, [filtro])
+  }, [gastos, filtro]);
 
   useEffect(() => {
     const presupuestoLS = Number(localStorage.getItem('presupuesto')) ?? 0;
